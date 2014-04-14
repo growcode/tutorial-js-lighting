@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>Opacity Shading</title>
+<link rel="stylesheet" type="text/css" href="include/style.css"/>
+</head>
+<body>
+<div id="container">
+<img src="images/image-01.jpg"/>
+<img src="images/image-02.jpg"/>
+<img src="images/image-03.jpg"/>
+</div>
+<script type="text/javascript" src="include/util.js"></script>
+<script type="text/javascript" src="include/shader.js"></script>
+<script type="text/javascript">
+(function () {
+	var shader = new Shader(document.querySelectorAll('#container img'));
+	var angle, progress;
+
+	(function loop() {
+		angle = Math.sin(Date.now() * 0.002);
+		progress = (1 + angle) * 0.5;
+		shader.update(progress);
+
+		requestAnimationFrame(loop);
+	}());
+}());
+</script>
+</body>
+</html>

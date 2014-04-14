@@ -1,0 +1,11 @@
+{
+  "name": "shading-tutorial",
+  "version": "0.0.0",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "marked": "^0.3.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "handlebars": "^2.0.0-alpha.2"
+  },
+  "author": "Grow"
+}
